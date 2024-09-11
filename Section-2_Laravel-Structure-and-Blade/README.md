@@ -1,16 +1,29 @@
 # Section 2 - Laravel Folder Structure and Blade
 
-In this section, I followed a tutorial series to understand the Laravel folder structure and Blade templating engine. The tutorials I referenced are listed below:
+In this section, I followed tutorials to learn about the Laravel folder structure and Blade templating engine. All the code for this section is located in the **`laravel11/`** subdirectory.
 
-### A. Installation Review
-[Installation Tutorial](https://youtu.be/nW60yGRoUrs?si=QVzCjdFsiLO4qrL-)
+Before running this project, ensure you have all the necessary services installed, including:
+- **Nginx**
+- **PHP 8.3**
 
-### B. Folder Structure
-[Folder Structure Tutorial](https://youtu.be/x55ndgkD2QI?si=7anOzBr9XZXpt7ul)
+Once the services are properly installed, navigate to the **`laravel11/`** directory and run the following command to start the development environment:
 
-### C. Blade Templating Engine
-[Blade Templating Engine (Part 1)](https://youtu.be/vDx6VA-6a6Y?si=5KL44NKwp9ToxHs3)  
-[Blade Templating Engine (Part 2)](https://youtu.be/00o1vJYTp4I?si=Rd88-lMuZRQYiS5-)
+```bash
+npm run dev
+```
+
+This will compile and serve the assets for your Laravel application.
+
+### Tutorials Followed:
+- **A. Installation Review**  
+  [Installation Tutorial](https://youtu.be/nW60yGRoUrs?si=QVzCjdFsiLO4qrL-)
+
+- **B. Folder Structure**  
+  [Folder Structure Tutorial](https://youtu.be/x55ndgkD2QI?si=7anOzBr9XZXpt7ul)
+
+- **C. Blade Templating Engine**  
+  [Blade Templating Engine (Part 1)](https://youtu.be/vDx6VA-6a6Y?si=5KL44NKwp9ToxHs3)  
+  [Blade Templating Engine (Part 2)](https://youtu.be/00o1vJYTp4I?si=Rd88-lMuZRQYiS5-)
 
 ---
 

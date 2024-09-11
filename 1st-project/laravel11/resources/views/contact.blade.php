@@ -16,10 +16,10 @@
     <h1>Contact Page</h1>
     <ul>
         <li>
-            <a href="https://www.instagram.com">Instagram</a>
+            <a href="https://www.instagram.com/rayssa_xox">Instagram</a>
         </li>
         <li>
-            <a href="https://www.facebook.com">Facebook</a>
+            <a href="https://www.facebook.com/rayssa.ravelia">Facebook</a>
         </li>
     </ul>
 </body>

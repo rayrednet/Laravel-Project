@@ -33,10 +33,9 @@ class InventoryManager {
         echo "Phone not found: " . $name . "\n";
     }
 
+    // Return the inventory array
     public function displayInventory() {
-        foreach ($this->inventory as $phone) {
-            echo "Name: " . $phone->getName() . ", Brand: " . $phone->getBrand() . ", Price: " . $phone->getPrice() . ", Stock: " . $phone->getStockQuantity() . "\n";
-        }
+        return $this->inventory;
     }
 }
 

@@ -1,7 +1,7 @@
 # Section 4 - Database Integration and Eloquent ORM
 
 ## Overview
-In this section, I integrate the database using SQLite and implement Eloquent ORM for handling data on our blog website. I'll walk through the process of setting up the database, creating models, and handling data using Laravel's Eloquent ORM.
+In this section, we integrate the database using SQLite and implement Eloquent ORM for handling data on our blog website. We'll walk through the process of setting up the database, creating models, and handling data using Laravel's Eloquent ORM.
 
 ### Tutorials Followed
 1. **Database & Migration**: [YouTube Tutorial](https://youtu.be/eghZY9-3Wko)
@@ -60,7 +60,7 @@ class Post extends Model
     protected $fillable = ['title', 'author', 'slug', 'body'];
 }
 ```
-This model corresponds to the `posts` table in the database and specifies the fields (`title`, `author`, `slug`, `body`) that can be filled when creating a new post. 
+This model corresponds to the `posts` table in the database and specifies the fields (`title`, `author`, `slug`, `body`) that can be filled when creating a new post.
 
 ### Migration File for Posts Table
 A **migration** in Laravel is used to define the structure of the database tables. It allows us to easily create and update the database schema.
@@ -94,6 +94,12 @@ return new class extends Migration
 };
 ```
 This migration creates a `posts` table with fields for `id`, `title`, `author`, `slug`, `body`, and timestamps (`created_at`, `updated_at`).
+
+### Viewing the Data in TablePlus
+The data can be easily viewed and managed using a database management tool like **TablePlus**. Here is a screenshot that shows the data in the `posts` table within TablePlus:
+![TablePlus Data](img/tableplus.png)
+
+You can see that there are 10 entries, and the columns correspond directly to the fields defined in our migration. The data matches the blog page entries.
 
 ### Entering Data Using PHP Artisan Tinker
 We use **PHP Artisan Tinker** to interact with the database in the terminal. Tinker allows us to run PHP commands interactively within a Laravel project.

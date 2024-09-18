@@ -1,7 +1,7 @@
 # Section 4 - Database Integration and Eloquent ORM
 
 ## Overview
-In this section, we integrate the database using SQLite and implement Eloquent ORM for handling data on our blog website. We'll walk through the process of setting up the database, creating models, and handling data using Laravel's Eloquent ORM.
+In this section, I integrate the database using SQLite and implement Eloquent ORM for handling data on our blog website. I'll walk through the process of setting up the database, creating models, and handling data using Laravel's Eloquent ORM.
 
 ### Tutorials Followed
 1. **Database & Migration**: [YouTube Tutorial](https://youtu.be/eghZY9-3Wko)

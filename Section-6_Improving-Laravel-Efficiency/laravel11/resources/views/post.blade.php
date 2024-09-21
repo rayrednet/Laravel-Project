@@ -1,21 +1,32 @@
 <x-layout>
-    <x-slot:title>{{ $title }}</x-slot>
-    <a href ="/posts/" class ="font-medium text-blue-500 hover:underline ">&laquo; Back to posts </a>
-  
-    <article class ="py-8 max-w-screen-md border-b ">
-      <h2 class = "mb-1 text-3xl tracking-tight font-bold text-gray-900"> {{ $post ['title'] }}</h2>
-
-      <div>
-        By
-        <a href="/authors/{{ $post->author->username }}" 
-          class="hover:underline text-gray-500" >  {{ $post->author->name }}</a> 
-          in 
-          <a href="/categories/{{ $post->category->slug }}" class="hover:underline text-gray-500"> 
-            {{ $post->category->name }}</a>
-          | {{ $post ['created_at'] ->format('g:i A F j, Y ') }} 
+  <x-slot:title>{{ $title }}</x-slot>  
+  <main class="pt-4 pb-16 lg:pt-8 lg:pb-24 dark:bg-gray-900 antialiased"> 
+      <div class="container mx-auto max-w-screen-xl px-4">
+          <article class="mx-auto w-full max-w-6xl prose lg:prose-lg dark:prose-invert">
+              <header class="mb-2">
+                  <a href="/posts" class="text-blue-500 hover:underline font-medium">&laquo; Back to posts</a>
+                  <address class="flex items-center my-4 not-italic"> 
+                    <a href="/authors/{{ $post->author->username }}"> 
+                      <img class="mr-4 w-16 h-16 rounded-full" src="{{ $post->author->profile_picture }}" alt="{{ $post->author->name }}">
+                    </a>
+                      <div>
+                          <a href="/authors/{{ $post->author->username }}" class="text-xl font-bold hover:underline dark:text-white">{{ $post->author->name }}</a>
+                          <p class="text-sm text-gray-500 dark:text-gray-400">
+                              {{ $post->created_at->format('g:i A F j, Y') }} | {{ $post->created_at->diffForHumans() }}
+                          </p>
+                      </div>
+                  </address>
+                  <a href="/categories/{{ $post->category->slug }}">
+                      <span class="bg-{{ $post->category->color }}-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded hover:underline dark:bg-primary-200 dark:text-primary-800">
+                          {{ $post->category->name }}
+                      </span>
+                  </a>
+                  <h1 class="mt-2 mb-4 text-3xl font-extrabold leading-tight dark:text-white lg:text-4xl">{{ $post->title }}</h1> 
+              </header>
+              <div class="prose dark:prose-invert">
+                  {!! $post->body !!}
+              </div>
+          </article>
       </div>
-      <p class = "my-4 font-light"> {{$post ['body']}}</p>
-      </p>
-    </article>
-
-  </x-layout>
+  </main>
+</x-layout>

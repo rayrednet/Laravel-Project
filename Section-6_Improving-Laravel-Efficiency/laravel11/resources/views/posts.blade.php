@@ -7,7 +7,7 @@
                 <input type="hidden" name="category" value="{{ request('category') }}">
             @endif
             @if(request('author'))
-                <input type="hidden" name="category" value="{{ request('author') }}">
+                <input type="hidden" name="author" value="{{ request('author') }}">
             @endif
             <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                 <div class="relative w-full">
@@ -18,7 +18,7 @@
                       </svg>
                     </div>
                     <input class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" 
-                    placeholder="Search for any article, categories, or author..." 
+                    placeholder="Search for any article here..." 
                     type="search" 
                     id="search" 
                     name="search"
@@ -31,7 +31,10 @@
         </form>
     </div>
 </div>
-  <div class="py-4 mx-auto max-w-screen-xl lg:py-8 px-0">
+
+{{ $posts->links() }}
+
+  <div class="my-2 py-4 mx-auto max-w-screen-xl lg:py-8 px-0">
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           @forelse ($posts as $post)
           <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-col h-full"> 
@@ -74,4 +77,6 @@
           @endforelse
       </div>
   </div>
+  {{ $posts->links() }}
+
 </x-layout>

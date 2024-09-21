@@ -18,8 +18,11 @@
                       </div>
                   </address>
                   <a href="/posts?category={{ $post->category->slug }}">
-                      <span class="bg-{{ $post->category->color }}-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded hover:underline dark:bg-primary-200 dark:text-primary-800">
-                          {{ $post->category->name }}
+                    <span class="bg-{{ $post->category->color }}-100 hover:underline text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                        {!! $post->category->icon !!} 
+                        <span class = "ml-2">  
+                            {{ $post->category->name }}
+                        </span>
                       </span>
                   </a>
                   <h1 class="mt-2 mb-4 text-3xl font-extrabold leading-tight dark:text-white lg:text-4xl">{{ $post->title }}</h1> 

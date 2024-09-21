@@ -6,7 +6,7 @@
 
     <div class="mt-4 flex flex-col lg:flex-row items-start">
       <!-- YouTube Video Section -->
-      <div class="youtube-section lg:w-1/3 w-full">
+      <div class="youtube-section lg:w-1/2 w-full">
         <a href="https://youtu.be/T1TR-RGf2Pw?si=sAoPK1a8eLc_eNKS" target="_blank">
           <img src="https://img.youtube.com/vi/T1TR-RGf2Pw/0.jpg" alt="YouTube Thumbnail" class="rounded-md shadow-md w-full lg:w-auto">
         </a>

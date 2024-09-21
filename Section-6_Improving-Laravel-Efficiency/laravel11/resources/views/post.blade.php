@@ -10,13 +10,14 @@
                       <img class="mr-4 w-16 h-16 rounded-full" src="{{ $post->author->profile_picture }}" alt="{{ $post->author->name }}">
                     </a>
                       <div>
-                          <a href="/authors/{{ $post->author->username }}" class="text-xl font-bold hover:underline dark:text-white">{{ $post->author->name }}</a>
+                          <a href="/posts?author={{ $post->author->username }}"
+                             class="text-xl font-bold hover:underline dark:text-white">{{ $post->author->name }}</a>
                           <p class="text-sm text-gray-500 dark:text-gray-400">
                               {{ $post->created_at->format('g:i A F j, Y') }} | {{ $post->created_at->diffForHumans() }}
                           </p>
                       </div>
                   </address>
-                  <a href="/categories/{{ $post->category->slug }}">
+                  <a href="/posts?category={{ $post->category->slug }}">
                       <span class="bg-{{ $post->category->color }}-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded hover:underline dark:bg-primary-200 dark:text-primary-800">
                           {{ $post->category->name }}
                       </span>

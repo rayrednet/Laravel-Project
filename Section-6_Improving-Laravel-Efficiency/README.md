@@ -1,13 +1,13 @@
 # Section 6 - Improving Laravel Efficiency
 
-In this last section, we continue our project by implementing Laravel efficiency following this tutorial:
-A. N + 1 Problem  
+In this last section, we continue our project by implementing Laravel efficiency following this tutorial: 
+- **N + 1 Problem**  
 [Watch tutorial here](https://youtu.be/K2p6Mtz5P20)  
-B. Redesign UI  
+- **Redesign UI**  
 [Watch tutorial here](https://youtu.be/uVRN9DzUAU8)  
-C. Searching  
+- **Searching**  
 [Watch tutorial here](https://youtu.be/8hhaAsRFAJs)  
-D. Pagination  
+- **Pagination**  
 [Watch tutorial here](https://youtu.be/HP3CdxX9oak)
 
 All code from this section is located in the `laravel11/` subdirectory.
